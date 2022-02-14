@@ -18,7 +18,7 @@
    </head>
    <body>
 
-         <h2>Introduzca usuario y contraseña</h2>
+         <h2>Introduzca usuario y contraseña puto</h2>
          <div class = "container form-signin">
 
             <?php
