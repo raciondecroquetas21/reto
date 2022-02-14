@@ -36,13 +36,10 @@
                      //https://www.php.net/manual/es/ref.oci8.php
                      var_dump($array);
                    */
-               $msg = '';
+    //  LOGIN EJEMPLO https://phpocitutorial.wordpress.com/log-in-page/          
+     $msg = '';
 
-               if (isset($_POST['login'
-
-//  LOGIN EJEMPLO https://phpocitutorial.wordpress.com/log-in-page/
-
-               ]) && !empty($_POST['username'])
+               if (isset($_POST['login']) && !empty($_POST['username'])
                   && !empty($_POST['password'])) {
 
                   if ($_POST['username'] == '' &&
