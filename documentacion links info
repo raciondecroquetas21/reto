@@ -1,0 +1,28 @@
+cerrar sesion codigo
+<?php
+session_start();
+if (isset($_SESSION['start']) && (time() - $_SESSION['start'] > 1800)) {
+    session_unset(); 
+    session_destroy(); 
+    echo "session destroyed"; 
+}
+$_SESSION['start'] = time();
+?>
+
+
+en oracle 
+https://stackoverflow.com/questions/54518111/how-to-kill-active-sessions-automatically
+
+
+You setup a profile and assign to the user in question
+
+here is an example:
+
+alter system set resource_limit=true scope=both;
+
+create profile restrictive limit
+   connect_time 60
+   sessions_per_user 2
+   ldle_time 30;
+
+ALTER USER scott PROFILE restrictive;
