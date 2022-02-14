@@ -1,4 +1,6 @@
 <?php
+
+//comprobar que chapa sesion
    session_start();
    unset($_SESSION["username"]);
    unset($_SESSION["password"]);

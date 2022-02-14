@@ -3,6 +3,6 @@
 
 
 
-
+// meter formulario con los campo0s de registro 
 
             ?>

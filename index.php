@@ -40,7 +40,7 @@
 
                if (isset($_POST['login'
 
-
+//  LOGIN EJEMPLO https://phpocitutorial.wordpress.com/log-in-page/
 
                ]) && !empty($_POST['username'])
                   && !empty($_POST['password'])) {
