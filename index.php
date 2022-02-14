@@ -78,6 +78,5 @@
             Borrar formulario <a href = "logout.php" tite = "Logout">Session.
 
          </div>
-
       </body>
    </html>
