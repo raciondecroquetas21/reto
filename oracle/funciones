@@ -1,0 +1,173 @@
+PROCEDIMIENTOS ALMACENADOS
+
+
+	
+create or replace NONEDITIONABLE PROCEDURE cambiar_contraseña(
+		p_nombre_usuario VARCHAR2,
+		p_contraseña VARCHAR2
+)
+IS
+BEGIN
+update clientes set contraseña_cliente=p_contraseña where nombre_usuario_cliente=p_nombre_usuario;
+END;
+
+
+
+
+
+create or replace PROCEDURE total_clientes
+AS
+total_cl number;
+BEGIN
+  			select count(*) into total_cl from clientes;
+   			dbms_output.put_line('el total de nuestros clientes es:  ' || total_cl);
+END;
+
+
+
+
+create or replace NONEDITIONABLE PROCEDURE num_servicios(p_fecha1 date, p_fecha2 date, p_dni_empleado varchar2)
+
+IS
+    total_servicio number;
+
+BEGIN
+
+select count(*) INTO total_servicio from realiza WHERE fecha_inicio BETWEEN TO_DATE(p_fecha1, 'YYYY-MM-DD') AND TO_DATE(p_fecha2, 'YYYY-MM-DD') AND dni_empleado = p_dni_empleado;
+dbms_output.put_line('El empleado seleccionado ha realizado un total de servicios de:  ' ||total_servicio);
+
+END;
+
+create or replace NONEDITIONABLE PROCEDURE NOTICIAS_ORDEN
+AS
+CURSOR ORDEN_N IS
+SELECT titulo, contenido FROM noticias_web order by fecha_noticias desc;
+v_titulo varchar2(60);
+v_contenido varchar2(1000);
+BEGIN
+OPEN ORDEN_N;
+FETCH ORDEN_N INTO v_titulo, v_contenido;
+WHILE ORDEN_N%FOUND LOOP
+DBMS_OUTPUT.PUT_LINE(V_TITULO||'*'||V_CONTENIDO);
+FETCH ORDEN_N INTO v_titulo, v_contenido;
+END LOOP;
+CLOSE ORDEN_N;
+END NOTICIAS_ORDEN;
+
+
+
+FUNCIONES
+
+
+create or replace function num_servicio(
+    		p_dni_empleado varchar2)
+	return number
+	is
+   v_id_servicio number;
+	begin
+
+select count(*) into v_id_servicio from realiza where dni_empleado=p_dni_empleado;
+return v_id_servicio;
+
+	end ;
+
+		
+		
+
+create or replace function valor_precio( p_id_servicio number
+    		)
+	return varchar2
+	is
+   		valor varchar2(30);
+		v_precio number := 0;
+	begin
+
+		SELECT precio INTO v_precio FROM servicios WHERE
+id_servicio=p_id_servicio;
+		IF v_precio < 200 THEN
+			valor := 'barato';
+		ELSIF v_precio >= 200 and  v_precio <= 5000 THEN
+			valor := 'medio';
+		ELSE
+			valor := 'caro';
+		END IF;
+		RETURN valor;
+
+
+	end ;
+
+
+create or replace function empleados_permisos(p_permiso number)
+	return varchar2
+	is
+   		v_nombre_emp varchar2(50);
+	begin
+
+select count(*) into v_nombre_emp from empleados inner join tipo_usuario on
+tipo_usuario.id_usuario = empleados.id_tipo where id_usuario=p_permiso;
+return v_nombre_emp;
+
+	end ;
+
+
+Para Evento. 	create or replace procedure trabajo_pendientes
+IS
+    
+    			r_dni_empleado number;
+        
+BEGIN
+    			select count(*)
+    			nto r_dni_empleado
+    			from empleados 
+    			inner join realiza 
+    			on realiza.dni_empleado=empleados.dni_empleado
+    			where fecha_fin is null;
+
+    			dbms_output.put_line('El empleado seleccionado ha realizado un total
+de servicios de:  ' || r_dni_empleado);
+    
+END;
+
+
+EVENTOS
+
+
+
+TRIGGERS
+
+create or replace NONEDITIONABLE TRIGGER nuevo_precio 
+BEFORE UPDATE ON servicios
+FOR EACH ROW
+    
+	BEGIN
+       
+        		INSERT INTO historial_precio_servicio(id_servicio, precio, 
+precio_nuevo,fecha_cambio) values(:OLD.id_servicio, :OLD.PRECIO,
+:new.precio, (select SYSDATE FROM DUAL));
+	END ;
+
+
+	 	 	 	
+create or replace TRIGGER cambio_permiso 
+BEFORE UPDATE ON departamento
+FOR EACH ROW
+BEGIN
+    		update empleados set id_tipo='1'
+    		where dni_empleado=:OLD.dni_empleado;
+
+    		update empleados set id_tipo='2'
+   		 where dni_empleado=:new.dni_empleado;
+END ;
+create or replace NONEDITIONABLE TRIGGER notificar_clientes
+AFTER INSERT ON clientes
+declare
+v_clientes number;
+BEGIN
+	select COUNT(*) into v_clientes from clientes;
+ 	IF v_clientes=10 then
+  	insert into noticias_web values ('Musicalmi crece', 'Musicalmi consigue pasar un millon de clientes', 1, (select SYSDATE FROM DUAL));
+	END IF;
+END ;
+
+
+
