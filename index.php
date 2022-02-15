@@ -61,7 +61,7 @@
 
    <div class="wrapper">
          <img class="logo animated  zoomIn" data-wow-delay="200ms" src="\img\logo.png" width="250px">
-         <form class="login animated  flipInX"  role = "form" action = "login.php" method = "post">
+         <form class="login animated  flipInX"  role = "form" action = "inc/login.php" method = "post">
             <p class="titular">LOGIN</p>
             <input type="text" placeholder="Usuario" autofocus name='usu'/>
             <i class="fa fa-user"></i>
@@ -72,7 +72,7 @@
                <span class="state"  value="Acceder">Enviar</span>
             </button>
          </form>
-         <p>Borrar formulario <a href="logout.php" tite="Logout">Session.</p>
+         <p>Borrar formulario <a href="inc/login.php" tite="Logout">Session.</p>
    </div>
 
 </body>
