@@ -23,7 +23,8 @@
    //include 'inc/db.php';
    include_once 'inc/db.php';
 
-   /*  //borrar si esto pinta todo ok
+   /*  //ESTO ES PARA VISUALIZAR UN VARDUMP Y VER QUE ESTA CONECTADA LA BASE DE DATOS
+   
                      $array = null;
                      $sql = oci_parse($conn, 'SELECT * FROM empleados');
                      oci_execute($sql);
@@ -58,40 +59,22 @@
 ?>
 <body>
 
-<div class="wrapper">
-      <img class="logo animated  zoomIn" data-wow-delay="200ms" src="\img\logo.png" width="250px">
-      <form class="login animated  flipInX"  role = "form" action = "login.php" method = "post">
-         <p class="titular">LOGIN</p>
-         <input type="text" placeholder="Usuario" autofocus />
-         <i class="fa fa-user"></i>
-         <input type="password" placeholder="Password" />
-         <i class="fa fa-key"></i>
-         <button type = "submit">
-            <i class="spinner"></i>
-            <span class="state">Enviar</span>
-         </button>
-      </form>
-      <p>Borrar formulario <a href="logout.php" tite="Logout">Session.</p>
-</div>
+   <div class="wrapper">
+         <img class="logo animated  zoomIn" data-wow-delay="200ms" src="\img\logo.png" width="250px">
+         <form class="login animated  flipInX"  role = "form" action = "login.php" method = "post">
+            <p class="titular">LOGIN</p>
+            <input type="text" placeholder="Usuario" autofocus />
+            <i class="fa fa-user"></i>
+            <input type="password" placeholder="Password" />
+            <i class="fa fa-key"></i>
+            <button type = "submit">
+               <i class="spinner"></i>
+               <span class="state">Enviar</span>
+            </button>
+         </form>
+         <p>Borrar formulario <a href="logout.php" tite="Logout">Session.</p>
+   </div>
 
-   <!-- LO DE AKETZA        <div class = "container">
-
-            <form class = "form-signin" role = "form"
-               action = "<?php// echo htmlspecialchars($_SERVER['PHP_SELF']);
-                           ?>" method = "post">
-               <h4 class = "form-signin-heading"><?php //echo $msg; ?></h4>
-               <input type = "text" class = "form-control"
-                  name = "username" placeholder = "username = jorge"
-                  required autofocus></br>
-               <input type = "password" class = "form-control"
-                  name = "password" placeholder = "password = 1234" required>
-               <button class = "btn btn-lg btn-primary btn-block" type = "submit"
-                  name = "login">Login</button>
-            </form>
-
-            Borrar formulario <a href = "logout.php" tite = "Logout">Session.
-
-         </div>-->
 </body>
 
 </html>
