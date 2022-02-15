@@ -1,0 +1,150 @@
+* {
+    font-family: 'josefin sans';
+}
+
+body {
+    background: #90afc5;
+}
+
+.mainText {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.mainText h1 {
+    font-size: 3rem;
+    margin-top: 15px;
+}
+.colorTxt{
+    color: #ffffff;
+}
+.mainText p {
+    font-size: 1.3rem;
+}
+
+section {
+    margin: 0 auto;
+    height: auto;
+    background: #90afc5;
+}
+
+section article {
+    height: 500px;
+}
+
+.main>section:nth-child(2)>article:nth-child(1) {
+    height: 165px;
+    margin-bottom: 10px;
+}
+
+.main>section:nth-child(2)>article:nth-child(1)>div:nth-child(1)>p:nth-child(2) {
+    margin: auto 4%;
+    text-align: justify;
+}
+
+.sec {
+    margin: 0 auto;
+    height: 500px;
+    background: #435463;
+}
+
+.sec article {
+    width: 1171px;
+    margin: 0 auto;
+    height: 442px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.text>div {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin: 0 15px 25px 0;
+    width: 48px;
+    height: 48px;
+}
+
+.icon img {
+    width: 100%;
+}
+
+.text>div h1 {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.text p {
+    color: #ffffff;
+    text-align: justify;
+}
+
+.wrap {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 10px;
+    height: 442px;
+    align-items: center;
+}
+
+.wrap-Map {
+    display: flex;
+    flex-flow: row;
+}
+
+.wrap-Map div {
+    color: #ffffff;
+    text-align: justify;
+    margin: auto 29px;
+	font-size: 1.7rem;
+}
+
+.col1,
+.col2 {
+    display: flex;
+    flex-flow: row;
+    flex: 1;
+}
+
+.colA,
+.colB {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    margin: 0 10px;
+}
+
+.col1 {
+    margin-right: 3%;
+}
+
+.pb {
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.pb h3 {
+    text-transform: uppercase;
+}
+
+.circle {
+    width: 200px;
+    margin: 6px 20px 20px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+}
+
+.circle>strong {
+    position: absolute;
+    top: 58px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 45px;
+    font-size: 43px;
+}

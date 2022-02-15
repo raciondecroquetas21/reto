@@ -1,0 +1,127 @@
+*{
+  box-sizing: border-box;
+}
+.portada {
+  display: flex;
+  margin-bottom: 10px;
+  overflow: hidden;
+  height: 350px;
+  overflow: hidden;
+}
+.wrap {
+  width: 1250px;
+  margin: auto;
+}
+.slider img {
+  max-width: 100%;
+}
+figure {
+  width: 100%;
+}
+#slider:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#slider img {
+  float: left;
+  width: 100%;
+  margin: 0 -100% 0 0;
+}
+.slider {
+  overflow: hidden;
+  height: 400px;
+}
+section {
+  margin: 0 auto;
+  height: auto;
+}
+section article {
+  height: auto;
+  display: flex;
+  flex-flow: column;
+}
+section article>h1 {
+  font-size: 3rem;
+  margin-top: 15px;
+  text-align: center;
+}
+.contenido {
+  display: flex;
+  flex-flow: column;
+  margin-right: 10px;
+}
+.part1 {
+  display: flex;
+}
+.img img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 1px 2px 5px black;
+}
+.bar {
+  border-top: 3px solid;
+  width: 10em;
+  display: block;
+  padding-top: .2em;
+  margin: auto;
+}
+.txt {
+  margin: 0px 20px;
+  text-align: justify;
+}
+.contenedor {
+  display: flex;
+}
+.card-base{
+  padding-right: 15px;
+  padding-right: 15px;
+}
+.equipo section {
+  width: 100%;
+}
+/*Fotos de las caras*/
+span.img{
+  max-width:100%;
+  height: 100%;
+  background-size: cover;
+  background-position: 50% 0%;
+  display: block;
+}
+.uno {
+  background-image: url(https://i.pinimg.com/originals/da/b3/d1/dab3d1f464ee0488f6b765af61d3c65f.jpg);
+}
+.dos {
+  background-image: url(https://i.ibb.co/HPz6qbj/DB4-N8-CCXg-AAEoe-S.jpg);
+}
+.tres {
+  background-image: url(https://i.ibb.co/KjLBPWN/ibai-presenta-junto-a-domino-s-gaming-el-video-mas-especial-de-su-vida.jpg);
+  background-position: 89% 0% !important;
+}
+.cuatro{
+  background-image: url(https://i.ibb.co/92yJ0g4/66389958-355656761998730-7211564646490898249-n.jpg);
+}
+.cinto {
+  background-image: url(https://i.ibb.co/VW58hpt/JFZh8Z4.png);
+}
+.seis{
+  background-image: url(https://i.ibb.co/CbZpnbf/dv0hf-M3-M-400x400.jpg);
+}
+/* Estilos Para el slider */
+.slick-prev::before,
+.slick-next::before {
+  font-size: 40px;
+  color: #090909;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus{
+  color: #000;
+}
+.slick-prev {
+  left: -46px;
+}
+.slick-dots li button::before{
+  font-size: 13px;
+}

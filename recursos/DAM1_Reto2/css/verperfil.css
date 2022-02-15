@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css?family=Prompt&display=swap');
+
+.perfilCambios {
+ width: 100%;
+ margin: 0px auto;
+ margin-top: 12%;
+}
+
+.perfilCambios a {
+  text-decoration: none;
+  text-align: center;
+  border-bottom: : 1px solid black;
+  color: rgb(30, 93, 166);
+  text-transform: uppercase;
+}
+
+.perfilCambios a:last-of-type {
+  border-right: none;
+}
+
+#cajaCambios {
+  width: 40%;
+  margin: 10px auto;
+  position: relative;
+  left: 11.63%;
+  top: -321px;
+  text-align: center;
+  padding: 25px 16px;
+}
+
+#cajaCambiosImagen {
+  width: 40%;
+  min-height: 551.5px;
+  margin: 10px auto;
+  position: relative;
+  left: 11.63%;
+  top: -569.5px;
+  text-align: center;
+  padding: 25px 16px;
+}
+
+#cajaCambios a.close {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  width: 30px;
+  color: #1e5da6;
+  cursor: pointer;
+  text-decoration: none;
+  background:#fff;
+  font-size: 1.5rem;
+}
+
+#cajaCambiosImagen a.close {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  width: 30px;
+  color: #1e5da6;
+  cursor: pointer;
+  text-decoration: none;
+  background:#fff;
+  font-size: 1.5rem;
+}
+
+#contraseñaPerfil {
+  display: none;
+}
+
+#imagenPerfil{
+  display: none;
+}
+
+#contraseñaPerfil:not(:target) {
+  display: none;
+}
+
+#contraseñaPerfil:target {
+  display: block;
+  animation: 1s ease-out 0s 1 izquierda;
+}
+
+#imagenPerfil:not(:target) {
+  display: none;
+}
+
+#imagenPerfil:target {
+  display: block;
+  animation: 1s ease-out 0s 1 izquierda;
+}
+
+form#login {
+  width: 50%;
+  height: 50%;
+  margin: 10px auto;
+}
+
+label {
+  display: block;
+  width: 260px;
+  margin: 0px auto;
+  text-align: center;
+  font-family: 'Prompt', serif;
+  color: rgb(30, 93, 166);
+  text-transform: uppercase;
+}
+
+hr.cambiarc {
+  margin: 40px 0px;
+  height: 2px;
+  border: none;
+  background: rgba(30, 113, 166, 0.5);
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+label.act {
+  margin-top: 30px;
+}
+
+form.cambiarc label:nth-child(2) {
+  margin-top: 20px;
+}
+
+button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 260px;
+  height: 36px;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+input, button {
+    border: none;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    outline: none;
+    background: none;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(30, 93, 166, 0.5);
+  text-align: center;
+}
+
+.env {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background: rgb(30, 113, 166);
+  text-transform: uppercase;
+}
+
+#imgActual {
+  max-height: 180px;
+  min-height: 100px;
+  max-width: 180px;
+  min-width: 100px;
+}
+
+#barraVertical {
+  width: 30%;
+  float: left;
+  height: 100vh;
+  border-right: 2px solid #8ebede;
+}
+
+#imagenUsu {
+  max-height: 248px;
+  min-height: 100px;
+  max-width: 248px;
+  min-width: 100px;
+  margin: 10px auto;
+  margin-top: 15%;
+}
+
+ #imgUsu{
+   height: 150px;
+   width: 200px;
+   margin-left: 24px;
+   border-radius: 50%;
+   border: 1px solid #8ebede;
+ }
+
+ #nombre {
+   width: 60%;
+   margin: 10px auto;
+ }
+
+ #nombre h2 {
+   width: 100%;
+  font-size: 1.4rem;
+  color:
+  rgb(30, 93, 166);
+  text-transform: uppercase;
+  text-align: center;
+  font-family: 'Prompt', serif;
+ }
+
+
+ hr {
+  height: 2px;
+  border: none;
+  width: 60%;
+  background: rgba(30, 113, 166, 0.5);
+ }
+
+ article#nombre hr {
+   margin-bottom: 120px;
+ }
+
+ img#cuadradoContraseña {
+   width: 43%;
+   height: 360px;
+   margin: 10px auto;
+   position: relative;
+   left: 10%;
+   top: 60px;
+ }
+
+ img#cuadradoImagen {
+   width: 43%;
+   height: 610.5px;
+   margin: 10px auto;
+   position: relative;
+   left: 10%;
+   top: 60px;
+ }
+
+ @keyframes izquierda {
+   0%{transform: translateX(100%);}
+   100%{transform: translateX(0%);}
+ }
+
+h3 {
+  font-family: 'Prompt', serif;
+}
+
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+#eligeimg {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  width: 260px;
+  height: 36px;
+  line-height: 36px;
+  background: rgb(30, 113, 166);
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+body {
+  height: 666px;
+}
+
+div#contpr {
+  width: 100%;
+  clear: both;
+  height: 750px;
+  overflow: hidden;
+}

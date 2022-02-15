@@ -1,9 +1,12 @@
+nav{
+    display: flex;
+}
 .dropdownmenu ul, .dropdownmenu li {
 	margin: 0;
 	padding: 0;
 }
 .dropdownmenu ul {
-	background: gray;
+	/*background: gray;*/
 	list-style: none;
 	width: 100%;
 }

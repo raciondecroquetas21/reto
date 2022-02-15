@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="css/musica.css">
     <script src="js\musica.js"></script>
 </head>
-
+<?php
+include_once 'inc\nav.html';
+?>
     <body>
         <main class="container">
 
