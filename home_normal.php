@@ -11,16 +11,16 @@
         <main class="container">
 
         <article>
-            <img src="https://i1.sndcdn.com/artworks-000086562420-apbm4h-t500x500.jpg" alt="cowboy bebop">
-            <h2>cowboy bebop</h2>
-            <button>ir a la serie</button>
+            <img src="https://m.media-amazon.com/images/I/61TcIu-z18L.jpg" alt="cowboy bebop">
+            <h2>Fatboy Slim</h2>
+            <audio id="sonido" src="https://soundcloud.com/src-music/sacrificio-xundah-flex-feat-triplo-feat-costa-hip-hop" controls>
 
         </article>
 
 
         <article>
             <img src="https://i1.sndcdn.com/artworks-000500823264-7n2dz6-t500x500.jpg" alt="samurai">
-            <h2>Samurai champloo</h2>
+            <h2>Queen</h2>
             <button>ir a la serie</button>
 
         </article>
