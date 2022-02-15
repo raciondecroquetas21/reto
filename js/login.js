@@ -6,12 +6,12 @@ $('.login').on('submit', function(e) {
   var $this = $(this),
     $state = $this.find('button > .state');
   $this.addClass('loading');
-  $state.html('Kimlik doğrulanıyor');
+  $state.html('autenticando');
   setTimeout(function() {
     $this.addClass('ok');
-    $state.html('Tekrar hoşgeldiniz!');
+    $state.html('¡Bienvenido de nuevo!');
     setTimeout(function() {
-      $state.html('Giriş Yapıldı Siteye Dön');
+      $state.html('Iniciar sesión Volver al significado del sitio');
       $this.removeClass('Yükleme tamamlandı.');
       working = false;
     }, 4000);
