@@ -1,23 +1,29 @@
 <?php
-function check_user($dni, $pass) {
-  require "db.php";
-  $contador = false;
-  $stid = oci_parse($conn, "SELECT PASSWORD_ALUM, NOMBRE, APELLIDO1 FROM alumno WHERE dni=:dni");
-  oci_bind_by_name($stid, ":dni", $dni);
-  oci_execute($stid);
-  $rows = oci_fetch_assoc($stid);
-  if (!$rows) {
-    echo "Usuario o Contraseña incorrectos";
-  } else {
-    if ($rows["PASSWORD_ALUM"] == $pass) {
-      $contador = true;
-      $usuario = $rows["NOMBRE"]." ".$rows["APELLIDO1"];
-      session_start();
-      $_SESSION['usu'] = $usuario;
-      $_SESSION['dni'] = $dni;
-    }
-  }
-  oci_free_statement($stid);
-  oci_close($conn);
-  return  $contador ? true : false ;
+session_start();
+include_once 'inc/db.php';
+if (!$conn) {
+$m = oci_error();
+echo $m['message'], '\n';
+exit;
+$query = 'SELECT nombre_usuario_cliente  FROM clientes WHERE contraseña_cliente = :pwd';
+$stid = oci_parse($conn, $query);
+if (isset($_POST['usu']) || isset($_POST['pwd'])){          
+$user=$_POST['usu'];
+$pass=$_POST['pwd'];
 }
+oci_bind_by_name($stid, ':usu', $user);
+oci_bind_by_name($stid, ':pwd', $pass);
+oci_execute($stid);
+$row = oci_fetch_array($stid, OCI_ASSOC);
+if ($row) {
+  $_SESSION['usu']=$_POST['usu'];
+  echo'log in successful';
+   }
+  else {
+ echo("The person " . $usu . " is not found .
+ Please check the spelling and try again or check password");
+ exit;
+}
+ oci_free_statement($stid);
+ oci_close($conn);
+?>

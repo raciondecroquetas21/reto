@@ -24,7 +24,7 @@
    include_once 'inc/db.php';
 
    /*  //ESTO ES PARA VISUALIZAR UN VARDUMP Y VER QUE ESTA CONECTADA LA BASE DE DATOS
-   
+
                      $array = null;
                      $sql = oci_parse($conn, 'SELECT * FROM empleados');
                      oci_execute($sql);
@@ -63,13 +63,13 @@
          <img class="logo animated  zoomIn" data-wow-delay="200ms" src="\img\logo.png" width="250px">
          <form class="login animated  flipInX"  role = "form" action = "login.php" method = "post">
             <p class="titular">LOGIN</p>
-            <input type="text" placeholder="Usuario" autofocus />
+            <input type="text" placeholder="Usuario" autofocus name='usu'/>
             <i class="fa fa-user"></i>
-            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Password" name='pwd' />
             <i class="fa fa-key"></i>
             <button type = "submit">
                <i class="spinner"></i>
-               <span class="state">Enviar</span>
+               <span class="state"  value="Acceder">Enviar</span>
             </button>
          </form>
          <p>Borrar formulario <a href="logout.php" tite="Logout">Session.</p>
