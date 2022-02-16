@@ -16,9 +16,9 @@ $_SESSION['start'] = time();
 if (isset($_POST["acceder"])) {
   include "db.php";
   include_once "funciones.php";
-  $dni =  $_POST["dni"];
-  $pass = $_POST["pass"];
-  $login = check_user($dni,$pass);
+  $user=$_POST['usu'];
+  $pass=$_POST['pwd'];
+  $login = check_user($user,$pass);
   if ($login){
     echo "Sesion inicida!";
     header("refresh:2;url=../index.php");
@@ -29,3 +29,4 @@ if (isset($_POST["acceder"])) {
 } else {
   header("location:../index.php");
 }
+?>
