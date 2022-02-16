@@ -7,6 +7,4 @@
     $stmt = oci_parse($conn,$sql);
     
     oci_execute($stmt); 
-
-    echo noticias_orden();
 ?>
