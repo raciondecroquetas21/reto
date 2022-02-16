@@ -22,7 +22,7 @@
 <?php
    //include 'inc/db.php';
    include_once 'inc/db.php';
-   include_once 'inc/nav.html';
+
 
    /*  //ESTO ES PARA VISUALIZAR UN VARDUMP Y VER QUE ESTA CONECTADA LA BASE DE DATOS
 
@@ -36,7 +36,10 @@
                   //https://www.php.net/manual/es/ref.oci8.php
                   var_dump($array);
                */
-   //  LOGIN EJEMPLO https://phpocitutorial.wordpress.com/log-in-page/          
+   //  LOGIN EJEMPLO https://phpocitutorial.wordpress.com/log-in-page/   
+   
+   
+
    $msg = '';
 
    if (
@@ -59,7 +62,7 @@
    }
 ?>
 <body>
-
+<?php include_once 'inc/nav.html';?>
    <div class="wrapper">
          <img class="logo animated  zoomIn" data-wow-delay="200ms" src="\img\logo.png" width="250px">
          <form class="login animated  flipInX"  role = "form" action = "inc/login.php" method = "post">
@@ -73,7 +76,7 @@
                <span class="state"  value="Acceder">Enviar</span>
             </button>
          </form>
-         <p>Borrar formulario <a href="inc/login.php" tite="Logout">Session.</p>
+         <p>Borrar formulario <a href="inc/logout.php" tite="Logout">Session.</p>
    </div>
 
 </body>
