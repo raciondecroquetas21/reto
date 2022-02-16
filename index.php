@@ -40,7 +40,7 @@
    
    
 /// tenemos en inc una funcion sacada de otro sitio para comprobar usuarios
-inclu/*de_once 'inc\funciones.php';
+include_once 'inc\funciones.php';
    $msg = '';
 
    if (
@@ -60,7 +60,7 @@ inclu/*de_once 'inc\funciones.php';
       } else {
          $msg = 'Wrong username or password';
       }
-   } */
+   } 
 ?>
 <body>
 <?php include_once 'inc/nav.html';?>
