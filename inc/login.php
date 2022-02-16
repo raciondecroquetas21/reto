@@ -18,7 +18,7 @@ if (isset($_POST["acceder"])) {
   include_once "funciones.php";
   $user=$_POST['usu'];
   $pass=$_POST['pwd'];
-  $login = check_user($user,$pass);
+  $login = check_user('SELECT contraseña_cliente  FROM clientes WHERE nombre_usuario_cliente = :usu');
   if ($login){
     echo "Sesion inicida!";
     header("refresh:2;url=../index.php");
