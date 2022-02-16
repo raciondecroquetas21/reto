@@ -1,7 +1,7 @@
 
 <?php
 
-include_once 'inc/db.php';
+include_once 'db.php';
 
 function insertar_usuario($conn,$dni, $nombre, $apellido, $direccion, $localidad, $nombre_usuario, $password)
     {
