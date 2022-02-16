@@ -2,10 +2,6 @@
             include_once 'inc/db.php';
             include_once 'inc/nav.html';
 
-
-
-// meter formulario con los campo0s de registro 
-
             ?>
 
             <!DOCTYPE html>
