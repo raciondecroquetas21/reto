@@ -26,7 +26,7 @@
 
 $html = "";
 //URL of your XML feed by user, playlist or channel ID
-$feed  = "http://www.youtube.com/feeds/videos.xml?channel_id=UCWFRESFCQjtDv0egKR3j40Q";
+$feed  = "http://www.youtube.com/feeds/videos.xml?channel_id=UCz_te5YcVVLaH0znruZgF5Q";
 //Load feed xml file
 $xml = simplexml_load_file($feed);
 //display 6 feed entries, use more or less as desired
