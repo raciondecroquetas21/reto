@@ -1,9 +1,9 @@
 body {
 	font-family: "Open Sans", sans-serif;
 	height: 100vh;
-	background-color: #e5e5f7;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #c4c3bf55, #c4c3bf );   
-	 color: white;
+	background-color: #222222;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #0f0f0f 10px ), repeating-linear-gradient( #c4c3bf55, #181818 );   
+	 color: rgb(15, 15, 15);
 }
 @keyframes spinner {
 	0% {
@@ -119,6 +119,8 @@ body {
 .logo {
 	margin-bottom: 20px;
 	border: solid rgba(255, 255, 255, 0.1) 10px;
+	background-color: white;
+	border-radius: 15px;
 }
 .logo:hover {
 	border: solid rgba(255, 255, 255, 0.3) 5px;
