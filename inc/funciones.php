@@ -18,6 +18,7 @@
     if ($row) {
     $_SESSION['usu']=$_POST['usu'];
     echo'log in successful';
+
     }
     else {
     echo("The person " . $user . " is not found . Please check the spelling and try again or check password");
@@ -25,5 +26,6 @@
 
     oci_free_statement($stid);
     oci_close($conn);
+    header('Location: home_normal.php');
 
 ?>
