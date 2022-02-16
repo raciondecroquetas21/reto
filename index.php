@@ -65,7 +65,7 @@ include_once 'inc\funciones.php';
 <body>
 <?php include_once 'inc/nav.html';?>
    <div class="wrapper">
-         <img class="logo animated  zoomIn" data-wow-delay="200ms" src="\img\logo.png" width="250px">
+      <!--<img class="logo animated  zoomIn" data-wow-delay="200ms" src="\img\logo.png" width="250px">
          <form class="login animated  flipInX"  role = "form" action = "inc/funciones.php" method = "post">
             <p class="titular">LOGIN</p>
             <input type="text" placeholder="Usuario" autofocus name='usu'/>
@@ -78,7 +78,7 @@ include_once 'inc\funciones.php';
             </button>
          </form>
          <p>Borrar formulario <a href="inc/logout.php" tite="Logout">Logout.</p>
-   </div>
+   </div>-->
 
 </body>
 
