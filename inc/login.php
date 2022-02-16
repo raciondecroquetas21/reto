@@ -9,23 +9,4 @@ if (isset($_SESSION['start']) && (time() - $_SESSION['start'] > 1800)) {
 }
 $_SESSION['start'] = time();
 
-
-
-
-// referencia borrar al terminar
-if (isset($_POST["acceder"])) {
-  include_once "db.php";
-  $user=$_POST['usu'];
-  $pass=$_POST['pwd'];
-  $login = check_user('SELECT contraseña_cliente  FROM clientes WHERE nombre_usuario_cliente = :usu');
-  if ($login){
-    echo "Sesion inicida!";
-    header("refresh:2;url=../feed_admin.php");
-  } else if (!$login){
-    echo "Usuario o contraseña incorrectos";
-    header("refresh:2;url=../login.php");
-  }
-} else {
-  header("location:../feed_admin.php");
-}
 ?>
