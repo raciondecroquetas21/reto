@@ -14,14 +14,12 @@
                 <link rel="stylesheet" href="css/registro.css">
             </head>
             <body>
-                    <form action="" method="post">
+                    <form action="inc\registrar.php" method="post">
                         <h1>Registro</h1>
                         <label for="">Nombre:</label>
                         <input type="text" name="nombre">
-                        <label for="">Edad:</label>
-                        <input type="text" name="edad">
-                        <label for="">Correo:</label>
-                        <input type="text" name="correo">
+                        <label for="">Contraseña:</label>
+                        <input type="text" name="contrasena">
                         <input type="submit" name="submit">
                     </form>
             </body>

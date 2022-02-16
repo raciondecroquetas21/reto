@@ -1,9 +1,16 @@
 
-#feed hr {display:none}
-#feed h4 {font-size: 12px;}
-#feed small {font-size: 10px}
-#feed a {color:red}
-#feed div {
+ hr {display:none}
+h4 {font-size: 19px;}
+ small {font-size: 10px}
+ a {color:rgb(248, 91, 43)}
+ div {
+     display: flex;
 	background: #DADADA; 
 	border-bottom:14px solid #999;
+    flex-direction: row;
+    flex-flow: row;
+    flex-wrap: wrap;
 	}
+.video{
+   
+    }

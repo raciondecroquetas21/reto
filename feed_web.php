@@ -7,7 +7,19 @@
 
 
             ?>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="css\feed.css">
+</head>
+<body>
+   
+</body>
+</html>
 
 
 <?php
@@ -30,7 +42,7 @@ for($i = 0; $i < 6; $i++) {
    $author = $xml->entry[$i]->author->name;
    $uri = $xml->entry[$i]->author->uri;
    //put nodes into html tags & embedded youTube player.
-   $html .= "<div class='col-sm-6 col-md-4'>
+   $html .= "<div class='video'>
 <h4><a href='$uri'>$title</a></h4>
 <iframe src='http://www.youtube.com/embed/$id' allowfullscreen>
 </iframe><br>
@@ -41,25 +53,4 @@ for($i = 0; $i < 6; $i++) {
 echo $html;
 ?>
 
-
-
-
-
-
-
-
-<!-- 
-
-$rss = simplexml_load_file('https://www.billboard.com/feed/');
-
-echo '<h4>'. $rss->channel->title . '</h4>';
-
-foreach ($rss->channel->item as $item) {
-   echo '<h4><a href="'. $item->link .'">' . $item->title . "</a></h4>";
-   echo "<p>" . $item->title . "</p>";
-   echo "<p>" . $item->description . "</p>";
-} 
-
-
- -->
 
