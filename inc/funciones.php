@@ -1,9 +1,9 @@
 <?php
 
-  /*   session_start();
+    session_start();
     include_once 'db.php';
     if (!$conn) { $m = oci_error();
-    echo $m['message'], '\n';
+    echo $m['message'], '\n';}
     exit;
     $query = 'SELECT nombre_usuario_cliente  FROM clientes WHERE contraseña_cliente = :pwd';
     $stid = oci_parse($conn, $query);
@@ -24,6 +24,6 @@
     exit;}
 
     oci_free_statement($stid);
-    oci_close($conn); */
+    oci_close($conn);
 
 ?>
