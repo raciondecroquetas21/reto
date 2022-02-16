@@ -20,7 +20,7 @@
     echo'log in successful';
     }
     else {
-    echo("The person " . $usu . " is not found . Please check the spelling and try again or check password");
+    echo("The person " . $user . " is not found . Please check the spelling and try again or check password");
     exit;}
 
     oci_free_statement($stid);
