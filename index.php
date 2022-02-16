@@ -66,7 +66,7 @@ include_once 'inc\funciones.php';
 <?php include_once 'inc/nav.html';?>
    <div class="wrapper">
          <img class="logo animated  zoomIn" data-wow-delay="200ms" src="\img\logo.png" width="250px">
-         <form class="login animated  flipInX"  role = "form" action = "inc/funciones.php" method = "post">
+         <form class="login animated  flipInX"  role = "form" action = "inc/login.php" method = "post">
             <p class="titular">LOGIN</p>
             <input type="text" placeholder="Usuario" autofocus name='usu'/>
             <i class="fa fa-user"></i>
