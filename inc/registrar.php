@@ -3,6 +3,12 @@
 
 include_once 'inc/db.php';
 
-
-oci_parse($conn, "insert into PASSWORD_ALUM, NOMBRE, APELLIDO1 FROM alumno WHERE dni=:dni");
+function insertar_usuario($conn,$dni, $nombre, $apellido, $direccion, $localidad, $nombre_usuario, $password)
+    {
+        $sql = "INSERT INTO clientes VALUES ('".$dni."','".$nombre."','".$apellido."','".$direccion."','".$localidad."','".$nombre_usuario."','".$password."')";
+         $stmt = oci_parse($conexion, $sql);     
+         $ok   = oci_execute( $stmt );          
+         oci_free_statement($stmt);             
+        return $ok;
+    }
 ?>
