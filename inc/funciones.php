@@ -17,7 +17,7 @@
     $row = oci_fetch_array($stid, OCI_ASSOC);
     if ($row) {
     $_SESSION['usu']=$_POST['usu'];
-    echo'log in successful';
+    header('Location: home_normal.php');
 
     }
     else {
@@ -26,6 +26,5 @@
 
     oci_free_statement($stid);
     oci_close($conn);
-    header('Location: home_normal.php');
 
 ?>
