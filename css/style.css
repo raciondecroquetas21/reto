@@ -1,6 +1,8 @@
 body {
 	font-family: "Open Sans", sans-serif;
 	height: 100vh;
+	background-color: #e5e5f7;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #c4c3bf55, #c4c3bf );    color: white;
 }
 @keyframes spinner {
 	0% {
@@ -21,7 +23,6 @@ body {
 	width: 100%;
 	min-height: 100%;
 	padding: 20px;
-	background: rgba(216, 215, 212, 0.85);
 }
 .login {
 	border-radius: 2px 2px 5px 5px;
