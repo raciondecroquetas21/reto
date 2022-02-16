@@ -1,5 +1,6 @@
 <?php
             include_once 'inc/db.php';
+            include_once 'inc/nav.html';
 
             //https://codigolite.com/como-crear-ejecutar-y-eliminar-un-procedimiento-almacenado-en-oracle/
       
