@@ -11,15 +11,15 @@ include_once 'db.php';
          oci_free_statement($stmt);             
         return $ok;*/
 
-        $stid = oci_parse($conn,"INSERT INTO clientes VALUES('".$dni."','".$nombre."','".$apellido."','".$direccion."','".$localidad."','".$nombre_usuario."','".$password."')");
+        $stid = oci_parse($conn,"INSERT INTO clientes VALUES( , :nombre, :apellido, :direccion, :localidad, :nom_usu, :con_usu)");
 
         $dni=$_POST['dni'];
         $nombre=$_POST['nombre'];
         $apellido=$_POST['apellido'];
         $direccion=$_POST['direccion'];
         $localidad=$_POST['localidad'];
-        $nombre_usuario=$_POST['nombre_usuario'];
-        $password=$_POST['password'];
+        $nombre_usuario=$_POST['nom_usu'];
+        $password=$_POST['con_usu'];
                     
 
         oci_bind_by_name($stid, ":dni", $dni);
