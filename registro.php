@@ -16,10 +16,20 @@
             <body>
                     <form action="inc\registrar.php" method="post">
                         <h1>Registro</h1>
+                        <label for="">DNI:</label>
+                        <input type="text" name="dni">
                         <label for="">Nombre:</label>
                         <input type="text" name="nombre">
+                        <label for="">Apellido:</label>
+                        <input type="text" name="apellido">
+                        <label for="">Dirección:</label>
+                        <input type="text" name="direccion">
+                        <label for="">Localidad:</label>
+                        <input type="text" name="localidad">
+                        <label for="">Nombre usuario:</label>
+                        <input type="text" name="nombre_usuario">
                         <label for="">Contraseña:</label>
-                        <input type="text" name="contrasena">
+                        <input type="password" name="password">
                         <input type="submit" name="submit">
                     </form>
             </body>
