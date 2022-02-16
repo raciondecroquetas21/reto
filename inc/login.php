@@ -14,8 +14,7 @@ $_SESSION['start'] = time();
 
 // referencia borrar al terminar
 if (isset($_POST["acceder"])) {
-  include "db.php";
-  include_once "funciones.php";
+  include_once "db.php";
   $user=$_POST['usu'];
   $pass=$_POST['pwd'];
   $login = check_user('SELECT contraseña_cliente  FROM clientes WHERE nombre_usuario_cliente = :usu');
