@@ -20,7 +20,7 @@
 
 
 <?php
-   //include 'inc/db.php';
+  
    include_once 'inc/db.php';
 
 
@@ -76,7 +76,7 @@
                <span class="state"  value="Acceder">Enviar</span>
             </button>
          </form>
-         <p>Borrar formulario <a href="inc/logout.php" tite="Logout">Session.</p>
+         <p>Borrar formulario <a href="inc/logout.php" tite="Logout">Logout.</p>
    </div>
 
 </body>
