@@ -1,6 +1,6 @@
 <?php
 
-    session_start();
+  /*   session_start();
     include_once 'db.php';
     if (!$conn) { $m = oci_error();
     echo $m['message'], '\n';
@@ -24,6 +24,6 @@
     exit;}
 
     oci_free_statement($stid);
-    oci_close($conn);
+    oci_close($conn); */
 
 ?>
