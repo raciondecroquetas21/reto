@@ -1,0 +1,9 @@
+
+#feed hr {display:none}
+#feed h4 {font-size: 12px;}
+#feed small {font-size: 10px}
+#feed a {color:red}
+#feed div {
+	background: #DADADA; 
+	border-bottom:14px solid #999;
+	}

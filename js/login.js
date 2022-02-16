@@ -1,4 +1,4 @@
-/* var working = false;
+ var working = false;
 $('.login').on('submit', function(e) {
   e.preventDefault();
   if (working) return;
@@ -17,4 +17,4 @@ $('.login').on('submit', function(e) {
     }, 4000);
   }, 3000);
 	return false;
-}); */
+}); 

@@ -11,16 +11,10 @@
 
 
 <?php
-////////////////////////////////////////////////
-//********PARSE YOUTUBE XML FEED WITH PHP*****//
-//******************By Nancy O.***************//
-//*******Alt-Web Design & Publishing******//
-//**************https://alt-web.com************//
-//*********SAVE THIS FILE AS MY_FEED.PHP******//
-////////////////////////////////////////////////
+
 $html = "";
 //URL of your XML feed by user, playlist or channel ID
-$feed  = "https://www.youtube.com/feeds/videos.xml?channel_id=UCWFRESFCQjtDv0egKR3j40Q";
+$feed  = "http://www.youtube.com/feeds/videos.xml?channel_id=UCWFRESFCQjtDv0egKR3j40Q";
 //Load feed xml file
 $xml = simplexml_load_file($feed);
 //display 6 feed entries, use more or less as desired

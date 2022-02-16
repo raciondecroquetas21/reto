@@ -2,7 +2,8 @@ body {
 	font-family: "Open Sans", sans-serif;
 	height: 100vh;
 	background-color: #e5e5f7;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #c4c3bf55, #c4c3bf );    color: white;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #c4c3bf55, #c4c3bf );   
+	 color: white;
 }
 @keyframes spinner {
 	0% {

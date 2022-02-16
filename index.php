@@ -15,7 +15,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>CroquetasTeam</title>
    <link href="css/style.css" rel="stylesheet">
-  <script src="js\login.js"></script>
+  <script src="js/login.js"></script>
 </head>
 
 
@@ -40,7 +40,7 @@
    
    
 /// tenemos en inc una funcion sacada de otro sitio para comprobar usuarios
-include_once 'inc\funciones.php';
+//include_once 'inc\funciones.php';
    $msg = '';
 
    if (
@@ -65,7 +65,7 @@ include_once 'inc\funciones.php';
 <body>
 <?php include_once 'inc/nav.html';?>
    <div class="wrapper">
-      <img class="logo animated  zoomIn" data-wow-delay="200ms" src="\img\logo.png" width="250px">
+         <img class="logo animated  zoomIn" data-wow-delay="200ms" src="\img\logo.png" width="250px">
          <form class="login animated  flipInX"  role = "form" action = "inc/funciones.php" method = "post">
             <p class="titular">LOGIN</p>
             <input type="text" placeholder="Usuario" autofocus name='usu'/>
