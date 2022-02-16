@@ -14,7 +14,7 @@
     oci_bind_by_name($stid, ':usu', $user);
     oci_bind_by_name($stid, ':pwd', $pass);
     oci_execute($stid);
-    $row = oci_fetch_array($stid, OCI_ASSOC+OCI_RETURN_NULLS);
+    $row = oci_fetch_array($stid, OCI_ASSOC);
     if ($row) {
     $_SESSION['usu']=$_POST['usu'];
     echo'log in successful';
