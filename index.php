@@ -49,12 +49,12 @@
    ) {
 
       if (
-         $_POST['username'] == $user &&
-         $_POST['password'] == $pass
+         $_POST['usu'] == $user &&
+         $_POST['pwd'] == $pass
       ) {
          $_SESSION['valid'] = true;
          $_SESSION['timeout'] = time();
-         $_SESSION['username'] = $user;
+         $_SESSION['usu'] = $user;
 
 
       } else {
