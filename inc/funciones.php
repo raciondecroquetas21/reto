@@ -5,7 +5,7 @@
     if (!$conn) { $m = oci_error();
     echo $m['message'], '\n';}
     exit;
-    $query = 'SELECT nombre_usuario_cliente  FROM clientes WHERE contraseña_cliente = :pwd';
+    $query = 'SELECT contraseña_cliente  FROM clientes WHERE nombre_usuario_cliente = :usu';
     $stid = oci_parse($conn, $query);
     if (isset($_POST['usu']) || isset($_POST['pwd'])){          
     $user=$_POST['usu'];
