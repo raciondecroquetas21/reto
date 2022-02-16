@@ -49,24 +49,24 @@ include_once 'inc\funciones.php';
    ) {
 
       if (
-         $_POST['username'] == '' &&
-         $_POST['password'] == '1234'
+         $_POST['username'] == $user &&
+         $_POST['password'] == $pass
       ) {
          $_SESSION['valid'] = true;
          $_SESSION['timeout'] = time();
-         $_SESSION['username'] = 'jorge';
+         $_SESSION['username'] = $user;
 
-         echo 'You have entered valid use name and password';
+
       } else {
          $msg = 'Wrong username or password';
       }
-   }
+   } 
 ?>
 <body>
 <?php include_once 'inc/nav.html';?>
    <div class="wrapper">
          <img class="logo animated  zoomIn" data-wow-delay="200ms" src="\img\logo.png" width="250px">
-         <form class="login animated  flipInX"  role = "form" action = "inc/login.php" method = "post">
+         <form class="login animated  flipInX"  role = "form" action = "inc/funciones.php" method = "post">
             <p class="titular">LOGIN</p>
             <input type="text" placeholder="Usuario" autofocus name='usu'/>
             <i class="fa fa-user"></i>
