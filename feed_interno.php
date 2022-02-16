@@ -8,8 +8,6 @@
     
     oci_execute($stmt); 
 
-    
-
 BEGIN
    noticias_orden();
    COMMIT;
