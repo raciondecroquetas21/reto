@@ -39,7 +39,8 @@
    //  LOGIN EJEMPLO https://phpocitutorial.wordpress.com/log-in-page/   
    
    
-
+/// tenemos en inc una funcion sacada de otro sitio para comprobar usuarios
+include_once 'inc\funciones.php';
    $msg = '';
 
    if (
