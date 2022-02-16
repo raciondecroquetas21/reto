@@ -49,12 +49,12 @@ include_once 'inc\funciones.php';
    ) {
 
       if (
-         $_POST['username'] == $usu &&
-         $_POST['password'] == $pwd
+         $_POST['username'] == $user &&
+         $_POST['password'] == $pass
       ) {
          $_SESSION['valid'] = true;
          $_SESSION['timeout'] = time();
-         $_SESSION['username'] = $usu;
+         $_SESSION['username'] = $user;
 
          echo 'You have entered valid use name and password';
       } else {
