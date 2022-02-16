@@ -1,5 +1,5 @@
 <?php
-
+include_once 'inc/nav.html';
 
 //cargamos la web de usuarios normales
 include_once 'home_normal.php';

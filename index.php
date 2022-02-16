@@ -22,6 +22,7 @@
 <?php
    //include 'inc/db.php';
    include_once 'inc/db.php';
+   include_once 'inc/nav.html';
 
    /*  //ESTO ES PARA VISUALIZAR UN VARDUMP Y VER QUE ESTA CONECTADA LA BASE DE DATOS
 
