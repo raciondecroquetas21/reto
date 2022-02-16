@@ -3,7 +3,7 @@
 
 include_once 'db.php';
 
-function insertar_usuario($conn,$dni, $nombre, $apellido, $direccion, $localidad, $nombre_usuario, $password)
+function insertar_usuario($conn, $dni, $nombre, $apellido, $direccion, $localidad, $nombre_usuario, $password)
     {
         $sql = "INSERT INTO clientes VALUES ('".$dni."','".$nombre."','".$apellido."','".$direccion."','".$localidad."','".$nombre_usuario."','".$password."')";
          $stmt = oci_parse($conexion, $sql);     
