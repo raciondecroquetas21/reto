@@ -5,7 +5,7 @@
     if (!$conn) { $m = oci_error();
     echo $m['message'], '\n';
     exit;}
-    $query = 'SELECT *  FROM empleados WHERE nombre_usuario_empleado = :usu and contrasena_empleado = :pwd' ;
+    $query = 'SELECT *  FROM empleados WHERE nombre_usuario_empleado = :usu and contrasena_empleado = :pwd and id_tipo = 2' ;
     $stid = oci_parse($conn, $query);
     if (isset($_POST['usu']) || isset($_POST['pwd'])){          
     $user=$_POST['usu'];
@@ -26,5 +26,5 @@
     oci_free_statement($stid);
     oci_close($conn);
     header('Location: ../home_admin.php');
-
+//   A.Marley Almi123
 ?>
