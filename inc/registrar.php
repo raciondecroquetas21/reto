@@ -31,4 +31,5 @@ include_once 'db.php';
         oci_bind_by_name($stid, ":con_usu", $password);
         oci_execute($stid);
         header('Location: ../index.php');
+
 ?>
