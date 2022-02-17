@@ -29,6 +29,6 @@ include_once 'db.php';
         oci_bind_by_name($stid, ":localidad", $localidad);
         oci_bind_by_name($stid, ":nom_usu", $nombre_usuario);
         oci_bind_by_name($stid, ":con_usu", $password);
-        oci_execute($stid);*/
+        oci_execute($stid);
    
 ?>
