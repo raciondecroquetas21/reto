@@ -77,8 +77,8 @@
                <span class="state"  value="Acceder">Enviar</span>
             </button>
          </form>
-         <p>Borrar formulario <a href="inc/logout.php" tite="Logout">Logout.</a></p>
-         <p>Empleados <a href="inc\empleados.php" tite="Logout">Entrar.</p>
+         <p>Borrar formulario<a href="inc/logout.php" tite="Logout">Logout.</a> </p>
+         <p>Empleados <a href="login_empleados.php" tite="Logout">Entrar.</a></p>
    </div>
 
 </body>
