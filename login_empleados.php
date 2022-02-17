@@ -66,7 +66,7 @@
 <?php include_once 'inc/nav.html';?>
    <div class="wrapper">
          <img class="logo animated  zoomIn" data-wow-delay="200ms" src="\img\logo.png" width="250px">
-         <form class="login animated  flipInX"  role = "form" action = "inc/funciones.php" method = "post">
+         <form class="login animated  flipInX"  role = "form" action = "inc/empleados.php" method = "post">
             <p class="titular">LOGIN</p>
             <input type="text" placeholder="Usuario" autofocus name='usu'/>
             <i class="fa fa-user"></i>
@@ -78,7 +78,6 @@
             </button>
          </form>
          <p>Borrar formulario <a href="inc/logout.php" tite="Logout">Logout.</p>
-         <p>Empleados <a href="empleados.php" tite="Logout">Entrar.</p>
    </div>
 
 </body>
