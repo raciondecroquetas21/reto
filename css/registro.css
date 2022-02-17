@@ -2,8 +2,10 @@
     box-sizing: border-box;
   }
   body {
-    background-color: #e5e5f7;
-    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #c4c3bf55, #c4c3bf );    color: white;
+
+    background-color: #222222;
+      background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #0f0f0f 10px ), repeating-linear-gradient( #c4c3bf55, #181818 );   
+     color: rgb(15, 15, 15);
     font-family: sans-serif;
   }
 
@@ -40,11 +42,11 @@
   input[type="submit"] {
     width: 30%;
     margin: auto;
-    background: #da2708;
-    color: white;
+    background: #ffd901;
+    color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;
   }
   .error {
-    color: red;
+    color: #ffd901;
   }

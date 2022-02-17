@@ -1,7 +1,7 @@
 
 body {
 	font-family: "Open Sans", sans-serif;
-	height: 100vh;
+
 	background-color: #222222;
     background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #0f0f0f 10px ), repeating-linear-gradient( #c4c3bf55, #181818 );   
 	 color: rgb(15, 15, 15);
@@ -11,7 +11,7 @@ body {
  hr {display:none}
 h4 {font-size: 19px;}
  small {font-size: 10px}
- a {color:rgb(248, 91, 43)}
+ a {color:#ffd901}
  div {
      text-align: center;
     display: inline-block;

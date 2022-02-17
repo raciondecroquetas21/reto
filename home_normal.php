@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>galería musical</title>
     <link rel="stylesheet" href="css/musica.css">
-    <script src="js\musica.js"></script>
+  
 </head>
 
     <body

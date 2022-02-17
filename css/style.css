@@ -1,6 +1,6 @@
 body {
 	font-family: "Open Sans", sans-serif;
-	height: 100vh;
+
 	background-color: #222222;
     background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #0f0f0f 10px ), repeating-linear-gradient( #c4c3bf55, #181818 );   
 	 color: rgb(15, 15, 15);
@@ -76,7 +76,7 @@ body {
 .login input:focus {
 	outline: none;
 	color: #444;
-	border-color: #da2708;
+	border-color: #ffd901;
 	border-left-width: 35px;
 }
 .login input:focus + i.fa {
@@ -86,7 +86,7 @@ body {
 }
 .login a {
 	font-size: 0.8em;
-	color: #da2708;
+	color: #ffd901;
 	text-decoration: none;
 }
 .login .title {
@@ -101,8 +101,8 @@ body {
 	width: 100%;
 	height: 100%;
 	padding: 10px 10px;
-	background: #da2708;
-	color: #fff;
+	background: #ffd901;
+	color: rgb(0, 0, 0);
 	display: block;
 	border: none;
 	margin-top: 20px;
@@ -118,12 +118,9 @@ body {
 }
 .logo {
 	margin-bottom: 20px;
-	border: solid rgba(255, 255, 255, 0.1) 10px;
-	background-color: white;
 	border-radius: 15px;
 }
 .logo:hover {
-	border: solid rgba(255, 255, 255, 0.3) 5px;
 }
 .login button .spinner {
 	display: block;
@@ -143,14 +140,14 @@ body {
 	box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
 }
 .login:not(.loading) button:hover {
-	box-shadow: 0px 1px 3px #da2708;
+	box-shadow: 0px 1px 3px #ffd901;
 }
 .login:not(.loading) button:focus {
 	border-bottom-width: 4px;
 }
 a {
 	padding: 15px;
-	color: #da2708;
+	color: #ffd901;
 }
 .titular {
 	padding: 20px 0;
@@ -162,5 +159,8 @@ a {
 	font-weight: bold;
 }
 
+p{
+	color: white;
+}
 
 

@@ -1,7 +1,8 @@
 
 body{
-    background-color: #e5e5f7;
-background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #c4c3bf55, #c4c3bf );
+	background-color: #222222;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #0f0f0f 10px ), repeating-linear-gradient( #c4c3bf55, #181818 );   
+	 color: rgb(15, 15, 15);
 }
 .container {
     display: flex;
@@ -85,4 +86,5 @@ button:hover {
 .premium{
     font-size: 80px;
     text-align: center;
+    color: #fff;
 }
