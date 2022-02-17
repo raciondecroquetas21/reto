@@ -78,7 +78,7 @@
             </button>
          </form>
          <p>Borrar formulario <a href="inc/logout.php" tite="Logout">Logout.</a></p>
-         <p>Empleados <a href="empleados.php" tite="Logout">Entrar.</p>
+         <p>Empleados <a href="inc/empleados.php" tite="Logout">Entrar.</p>
    </div>
 
 </body>
