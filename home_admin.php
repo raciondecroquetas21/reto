@@ -1,14 +1,5 @@
 <?php
-include_once 'inc/nav.html';
-
-//cargamos la web de usuarios normales
-include_once 'home_normal.php';
-
-//escribimos las maquetas que no estan publicadas aun que solo pueden ver los ADMINISTRADORES
-
-
-?>
-
+include_once 'inc/nav.html';?>
 <h2 class="premium">Musica premium</h2>
  <main class="container">
     <article>
@@ -33,3 +24,14 @@ include_once 'home_normal.php';
     </audio>
     </article>
  </main>
+
+ <?php
+
+
+//cargamos la web de usuarios normales
+include_once 'home_normal.php';
+
+//escribimos las maquetas que no estan publicadas aun que solo pueden ver los ADMINISTRADORES
+
+
+?>
