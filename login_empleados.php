@@ -77,7 +77,6 @@
                <span class="state"  value="Acceder">Enviar</span>
             </button>
          </form>
-         <p>Borrar formulario <a href="inc/logout.php" tite="Logout">Logout.</p>
    </div>
 
 </body>
