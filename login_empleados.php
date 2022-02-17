@@ -67,7 +67,7 @@
    <div class="wrapper ">
          <img class="logo animated  zoomIn" data-wow-delay="200ms" src="\img\logo.png" width="250px">
          <form class="login animated  flipInX empleados"  role = "form" action = "inc/empleados.php" method = "post">
-            <p class="titular">LOGIN</p>
+            <p class="titular">LOGIN EMPLEADOS</p>
             <input type="text" placeholder="Usuario" autofocus name='usu'/>
             <i class="fa fa-user"></i>
             <input type="password" placeholder="Password" name='pwd' />
