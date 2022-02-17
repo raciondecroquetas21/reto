@@ -21,7 +21,7 @@
 
     }
     else {
-    // echo("The person " . $user . " is not found . Please check the spelling and try again or check password");
+    echo("The person " . $user . " is not found . Please check the spelling and try again or check password");
     header('Location: ../index.php');
     exit;}
 
