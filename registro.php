@@ -27,9 +27,9 @@
                         <label for="">Localidad:</label>
                         <input type="text" name="localidad">
                         <label for="">Nombre usuario:</label>
-                        <input type="text" name="nombre_usuario">
+                        <input type="text" name="nom_usu">
                         <label for="">Contraseña:</label>
-                        <input type="password" name="password">
+                        <input type="password" name="con_usu">
                         <input type="submit" name="submit">
                     </form>
             </body>
