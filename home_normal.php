@@ -8,7 +8,7 @@
 </head>
 
     <body
-    ><?php include_once 'inc\nav.html';?>
+    ><?php include_once 'inc\nav.php';?>
         <main class="container">
 
         <article>

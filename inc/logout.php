@@ -2,9 +2,11 @@
 
 //comprobar que chapa sesion
    session_start();
-   unset($_SESSION["username"]);
+   session_unset();
+   session_destroy();
+   unset($_SESSION["usu"]);
    unset($_SESSION["password"]);
 
    echo 'You have cleaned session';
-   header('Refresh: 2; URL = login.php');
+   header('Refresh: 0; URL = index.php');
 ?>

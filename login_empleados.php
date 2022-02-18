@@ -63,7 +63,7 @@
    } 
 ?>
 <body>
-<?php include_once 'inc/nav.html';?>
+<?php include_once 'inc/nav.php';?>
    <div class="wrapper ">
          <img class="logo animated  zoomIn" data-wow-delay="200ms" src="\img\logo.png" width="250px">
          <form class="login animated  flipInX empleados"  role = "form" action = "inc/empleados.php" method = "post">

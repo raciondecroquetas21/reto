@@ -12,7 +12,7 @@
 
 <?php
             
-            include_once 'inc/nav.html';
+            include_once 'inc/nav.php';
 
 
 //  https://alt-web.com/TUTORIALS/?id=parse_xml_feed_with_php_code

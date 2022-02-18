@@ -17,6 +17,7 @@
     $row = oci_fetch_array($stid, OCI_ASSOC);
     if ($row) {
     $_SESSION['usu']=$_POST['usu'];
+    $_SESSION['admin'] = false;
     echo'log in successful';
     }
     else {

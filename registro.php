@@ -1,6 +1,6 @@
 <?php
             include_once 'inc/db.php';
-            include_once 'inc/nav.html';
+            include_once 'inc/nav.php';
 
 ?>
 

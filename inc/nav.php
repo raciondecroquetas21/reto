@@ -14,12 +14,12 @@
     </nav>
     <div class="account-actions">
       <div class="account-dropdown">
-        ⚙
-        <ul>
-          <li>Your Account</li>
-        </ul>
+        <?php
+        session_start();
+          echo '<p>' . $_SESSION['usu'] .'</p>';
+        ?>
       </div>
-      <a href="index.php" class="sign-out-link">Sign Out</a>
+      <a href="index.php" class="sign-out-link">⚙ Sign Out</a>
     </div>
   </header>
   

@@ -12,7 +12,7 @@
 
 // aqui empieza lo bueno lo anterior son las ref
 
-    header('Content-Type: text/xml; charset=utf-8', true); //set document header content type to be XML
+   header('Content-Type: text/xml; charset=utf-8', true); //set document header content type to be XML
 
 $rss = new SimpleXMLElement('<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"></rss>');
 $rss->addAttribute('version', '2.0');
@@ -57,34 +57,30 @@ $croissant = oci_parse($conn,$sql);
   // Ejecutamos la sentencia primero
   oci_execute($croissant);
   // Luego ejecutamos el cursor
- $datos= null;
   // Vinculamos el resultado del cursor en un array
-  while ($data = oci_fetch_assoc($croissant)) {
-      $datos[] = $data;
-      
-    }
-  
-    var_dump($datos);
 
-if($datos){ //we have records 
-	while($row = $results->oci_parse($conn,$sql)
-    
-     ) //loop through each row
-	{
+
+if($croissant){ //we have records 
+  while ($row = oci_fetch_assoc($croissant)) {
+    //var_dump($row['TITULO']);
+      //loop through each row
+	
         
 		$item = $rss->addChild('item'); //add item node
-		$title = $item->addChild('title', $row->title); //add title node under item
+		$title = $item->addChild('titulo', $row['TITULO']); //add title node under item
+        $title = $item->addChild('contenido', $row['CONTENIDO']); //add title node under item
+
+        /*
 		$link = $item->addChild('link', 'http://www.your-site.com/link/goes/here/'); //add link node under item
-		$guid = $item->addChild('guid', 'http://www.your-site.com/link/goes/here/'. $row->id); //add guid node under item
+		$guid = $item->addChild('guid', 'http://www.your-site.com/link/goes/here/'. $row ['id']); //add guid node under item
 		$guid->addAttribute('isPermaLink', 'false'); //add guid node attribute
 		
-		$description = $item->addChild('description', '<![CDATA['. htmlentities($row->content) . ']]>'); //add description
+		$description = $item->addChild('description', '<![CDATA['. htmlentities($row['contenido']) . ']]>'); //add description
 		
-		$date_rfc = gmdate(DATE_RFC2822, strtotime($row->published));
-		$item = $item->addChild('pubDate', $date_rfc); //add pubDate node
+		$date_rfc = gmdate(DATE_RFC2822, strtotime($row['published']));
+		$item = $item->addChild('pubDate', $date_rfc); //add pubDate node*/
 	}
 }
-
 echo $rss->asXML(); //output XML 
 ?> 
 

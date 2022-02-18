@@ -1,5 +1,10 @@
 <?php
-include_once 'inc/nav.html';?>
+include_once 'inc/nav.php';
+session_start();
+if (!isset($_SESSION['usu']) || $_SESSION['admin'] != true) {
+    header('location:index.php');
+}
+?>
 <h2 class="premium">Musica premium</h2>
  <main class="container">
     <article>
