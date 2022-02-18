@@ -8,19 +8,32 @@ body {
 }
 
 
- hr {display:none}
-h4 {font-size: 19px;}
- small {font-size: 10px}
- a {color:#ffd901}
- div {
-     text-align: center;
-    display: inline-block;
-    flex-direction: row;
-    /* flex-flow: row; */
-    width: 30%;
+ hr {
+     display:none}
+h4 {
+    font-size: 19px;}
+ small {
+     font-size: 10px}
+ a {
+     color:#ffd901}
 
-    margin:20px;
-	}
+
+  .container{
+display: flex;
+flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 5%;
+
+  }  
+
 .video{
-    
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    border: 1px #363636 solid;
+    border-radius: 15px;
+    padding: 8px;
+    margin: 10px;
+    background-color: #363636;
+    box-shadow: 5px 5px 6px 0px rgb(0 0 0 / 64%);
     }

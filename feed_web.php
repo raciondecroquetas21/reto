@@ -1,12 +1,4 @@
-<?php
-            
-            include_once 'inc/nav.html';
 
-
-//  https://alt-web.com/TUTORIALS/?id=parse_xml_feed_with_php_code
-
-
-            ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,12 +9,19 @@
    <link rel="stylesheet" href="css\feed.css">
 </head>
 <body>
-   
-</body>
-</html>
-
 
 <?php
+            
+            include_once 'inc/nav.html';
+
+
+//  https://alt-web.com/TUTORIALS/?id=parse_xml_feed_with_php_code
+
+
+            ?>
+   <div class="container">
+
+   <?php
 
 $html = "";
 //URL of your XML feed by user, playlist or channel ID
@@ -52,5 +51,14 @@ for($i = 0; $i < 6; $i++) {
 //output everything to html
 echo $html;
 ?>
+
+
+
+
+   </div>
+</body>
+</html>
+
+
 
 
