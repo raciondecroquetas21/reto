@@ -47,18 +47,21 @@ body {
 }
 .site-nav .active a {
   background: #ffd901;
-  color: #e9dd9c;
+  color: #000000;
 }
 .site-nav a {
   color: #e2e6e7;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 20px;
+  padding: 10px;
   display: inline-block;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: bold;
 }
-
+.site-nav  :hover{
+	background: #ffd901;
+	color: #000000;
+}
 .account-actions {
   display: flex;
   align-items: center;
