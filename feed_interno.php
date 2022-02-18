@@ -1,6 +1,6 @@
 <?php 
    
-  /*  include_once 'inc/db.php';
+   /* include_once 'inc/db.php';
 
     $sql = 'BEGIN noticias_orden(); END;';
     
@@ -48,9 +48,6 @@ $generator = $rss->addChild('generator','PHP Simple XML'); //add generator node
  if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 } 
-*/
-
-
 
 $sql = 'BEGIN noticias_orden(); END;';
 
@@ -67,13 +64,8 @@ $sql = 'BEGIN noticias_orden(); END;';
       $datos[] = $data;
     }
   
-print "$datos\n";
     
 var_dump($datos);
-
-
-
-/*
 
 if($results){ //we have records 
 	while($row = $results->oci_parse($conn,$sql)
@@ -95,4 +87,30 @@ if($results){ //we have records
 }
 
 echo $rss->asXML(); //output XML */
+?> 
+
+<?php
+include_once 'inc/db.php';
+if ($conn->connect_errno) {
+    echo "Falló la conexión a MySQL: (" . $conn->connect_errno . ") " . $conn->connect_error;
+}
+
+if (!$conn->query("DROP TABLE IF EXISTS test") || !$conn->query("BEGIN noticias_orden(); END;")) {
+    echo "Falló la creación de la tabla: (" . $conn->errno . ") " . $conn->error;
+}
+
+if (!$conn->query("DROP PROCEDURE IF EXISTS p") ||
+    !$conn->query("BEGIN noticias_orden(); END;)) {
+    echo "Falló la creación del procedimiento almacenado: (" . $conn->errno . ") " . $conn->error;
+}
+
+if (!$conn->query("BEGIN noticias_orden(); END;")) {
+    echo "Falló CALL: (" . $conn->errno . ") " . $conn->error;
+}
+
+if (!($resultado = $conn->query("BEGIN noticias_orden(); END;"))) {
+    echo "Falló SELECT: (" . $conn->errno . ") " . $conn>error;
+}
+
+var_dump($resultado->fetch_assoc());
 ?>
