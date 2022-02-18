@@ -112,5 +112,5 @@ if (!($resultado = $conn->query("BEGIN noticias_orden(); END;"))) {
     echo "Falló SELECT: (" . $conn->errno . ") " . $conn>error;
 }
 
-var_dump($resultado->fetch_assoc());
+var_dump($resultado-> oci_fetch_array();
 ?>
