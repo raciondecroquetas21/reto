@@ -91,11 +91,11 @@ echo $rss->asXML(); //output XML */
 
 <?php
 
-// Store procedure call without params
+  // Store procedure call without params
 
-include_once 'inc/db.php';
+  include_once 'inc/db.php';
 
-$stmt=oci_parse ($conn, "CALL noticias_orden");
+  $stmt=oci_parse ($conn, "CALL noticias_orden");
 
        if ($result = oci_execute($stmt)) {
 
