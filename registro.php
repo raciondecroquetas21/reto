@@ -2,7 +2,7 @@
             include_once 'inc/db.php';
             include_once 'inc/nav.html';
 
-            ?>
+?>
 
             <!DOCTYPE html>
             <html lang="es">
