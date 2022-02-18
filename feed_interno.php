@@ -106,7 +106,7 @@ echo $rss->asXML(); //output XML */
                      ....
 
               }
-              oci_free_statement($result);
+             echo oci_free_statement($result);
        }
        else
        echo "<p>No se encontraron personas</p>";
