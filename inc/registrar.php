@@ -18,8 +18,8 @@ include_once 'db.php';
         $apellido=$_POST['apellido'];
         $direccion=$_POST['direccion'];
         $localidad=$_POST['localidad'];
-        $nombre_usuario=$_POST['nombre_usuario'];
-        $password=$_POST['password'];
+        $nombre_usuario=$_POST['nom_usu'];
+        $password=$_POST['con_usu'];
                     
 
         oci_bind_by_name($stid, ":dni", $dni);
