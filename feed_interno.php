@@ -86,3 +86,4 @@ if($results){ //we have records
 
 echo $rss->asXML(); //output XML 
 ?> 
+
