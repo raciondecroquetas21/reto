@@ -1,8 +1,8 @@
 <?php 
    
-   /* include_once 'inc/db.php';
+   include_once 'inc/db.php';
 
-    $sql = 'BEGIN noticias_orden(); END;';
+    /* $sql = 'BEGIN noticias_orden(); END;';
     
     $stmt = oci_parse($conn,$sql);
     
@@ -48,7 +48,7 @@ $generator = $rss->addChild('generator','PHP Simple XML'); //add generator node
  if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 } 
-
+*/
 $sql = 'BEGIN noticias_orden(); END;';
 
 
@@ -67,7 +67,7 @@ $sql = 'BEGIN noticias_orden(); END;';
     
 var_dump($datos);
 
-if($results){ //we have records 
+/*if($results){ //we have records 
 	while($row = $results->oci_parse($conn,$sql)
     
      ) //loop through each row
@@ -88,27 +88,3 @@ if($results){ //we have records
 
 echo $rss->asXML(); //output XML */
 ?> 
-
-<?php
-
-  // Store procedure call without params
-
-  include_once 'inc/db.php';
-
-  $stmt=oci_parse ($conn, "BEGIN noticias_orden; END;");
-
-       if ($result = oci_execute($stmt)) {
-
-              while ($row = oci_fetch_assoc($result)) {
-
-                     // i.e.: DBTableFieldName="userID"
-                     echo "row = ".$row["DBTableFieldName"]."<br />";
-                     ....
-
-              }
-             echo oci_free_statement($result);
-       }
-       else
-       echo "<p>No se encontraron personas</p>";
-
-?>
