@@ -1,6 +1,6 @@
 <?php 
    
-    include_once 'inc/db.php';
+  /*  include_once 'inc/db.php';
 
     $sql = 'BEGIN noticias_orden(); END;';
     
@@ -48,6 +48,7 @@ $generator = $rss->addChild('generator','PHP Simple XML'); //add generator node
  if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 } 
+*/
 $sql = 'BEGIN noticias_orden(); END;';
 
 
@@ -62,10 +63,11 @@ $sql = 'BEGIN noticias_orden(); END;';
   while ($data = oci_fetch_assoc($sql)) {
       $datos[] = $data;
     }
+  
+print "$datos\n";
     
 var_dump($datos);
-
-
+/*
 
 if($results){ //we have records 
 	while($row = $results->oci_parse($conn,$sql)
@@ -86,5 +88,5 @@ if($results){ //we have records
 	}
 }
 
-echo $rss->asXML(); //output XML 
+echo $rss->asXML(); //output XML */
 ?>
