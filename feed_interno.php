@@ -1,8 +1,8 @@
 <?php 
    
-   include_once 'inc/db.php';
+  /* include_once 'inc/db.php';
 
-   /* $sql = 'BEGIN noticias_orden(); END;';
+    $sql = 'BEGIN noticias_orden(); END;';
     
     $stmt = oci_parse($conn,$sql);
     
@@ -46,6 +46,7 @@ $generator = $rss->addChild('generator','PHP Simple XML'); //add generator node
  if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 } */
+include_once 'inc/db.php';
 
 $sql = 'SELECT titulo, contenido FROM noticias_web order by fecha_noticias desc';
 $croissant = oci_parse($conn,$sql);
