@@ -95,9 +95,9 @@ echo $rss->asXML(); //output XML */
 
 include_once 'inc/db.php';
 
-oci_parse ($conn, "CALL noticias_orden") OR DIE (mysqli_error($conn));
+$stmt=oci_parse ($conn, "CALL noticias_orden") OR DIE (mysqli_error($conn));
 
-       if ($result = oci_execute($conn)) {
+       if ($result = oci_execute($stmt)) {
 
               while ($row = oci_fetch_assoc($result)) {
 
