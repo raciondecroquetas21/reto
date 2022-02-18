@@ -39,7 +39,7 @@ $generator = $rss->addChild('generator','PHP Simple XML'); //add generator node
 
 //connect to MySQL - mysqli(HOST, USERNAME, PASSWORD, DATABASE);
 //$mysqli = new mysqli($mysql_host, $mysql_username, $mysql_password, $mysql_database);
-$mysqli = oci_connect('RETOALMI','Almi123','192.168.4.14:1521/ORCL');
+
 
   include_once 'inc/db.php';
 
@@ -48,15 +48,27 @@ $mysqli = oci_connect('RETOALMI','Almi123','192.168.4.14:1521/ORCL');
 /* if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 } */
-$results =  $sql = 'BEGIN noticias_orden(); END;';
+$sql = 'BEGIN noticias_orden(); END;';
 
 
 // ---->  $sql = 'BEGIN noticias_orden(); END;';
 
+// En este orden importante
+  // Ejecutamos la sentencia primero
+  oci_execute($sql);
+  // Luego ejecutamos el cursor
+ $datos= null;
+  // Vinculamos el resultado del cursor en un array
+  while ($data = oci_fetch_assoc($sql)) {
+      $datos[] = $data;
+    }
+    
+var_dump($datos);
+
 
 
 if($results){ //we have records 
-	while($row = $results->oci_parse($conn,$sql);
+	while($row = $results->oci_parse($conn,$sql)
     
      ) //loop through each row
 	{
