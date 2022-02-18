@@ -95,7 +95,7 @@ echo $rss->asXML(); //output XML */
 
   include_once 'inc/db.php';
 
-  $stmt=oci_parse ($conn, "BEGIN noticias_orden(); END;");
+  $stmt=oci_parse ($conn, "BEGIN noticias_orden; END;");
 
        if ($result = oci_execute($stmt)) {
 
