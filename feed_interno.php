@@ -47,25 +47,25 @@ $generator = $rss->addChild('generator','PHP Simple XML'); //add generator node
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 } */
 
-$sql = 'BEGIN noticias_orden(); END;';
-
+$sql = 'SELECT titulo, contenido FROM noticias_web order by fecha_noticias desc';
+$croissant = oci_parse($conn,$sql);
 
 // ---->  $sql = 'BEGIN noticias_orden(); END;';
 
 // En este orden importante
   // Ejecutamos la sentencia primero
-  oci_execute($sql);
+  oci_execute($croissant);
   // Luego ejecutamos el cursor
  $datos= null;
   // Vinculamos el resultado del cursor en un array
-  while ($data = oci_fetch_assoc($sql)) {
+  while ($data = oci_fetch_assoc($croissant)) {
       $datos[] = $data;
+      
     }
   
-    
-var_dump($datos);
+    var_dump($datos);
 
-if($results){ //we have records 
+if($datos){ //we have records 
 	while($row = $results->oci_parse($conn,$sql)
     
      ) //loop through each row

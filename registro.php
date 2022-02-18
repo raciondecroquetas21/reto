@@ -30,7 +30,7 @@
                         <input type="text" name="nom_usu">
                         <label for="">Contraseña:</label>
                         <input type="password" name="con_usu">
-                        <input type="submit" name="submit">
+                        <input type="submit" name="submit" value="Enviar" >
                     </form>
             </body>
 </html>

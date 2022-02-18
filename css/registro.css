@@ -40,9 +40,8 @@
     margin-bottom: 20px;
   }
   input[type="submit"] {
-    width: 21%;
+    width: 30%;
     margin: auto;
-    padding: 5px;
     background: #ffd901;
     color: rgb(0, 0, 0);
     border: solid 2px rgb(0, 0, 0);
