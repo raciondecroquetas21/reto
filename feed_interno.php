@@ -49,6 +49,9 @@ $generator = $rss->addChild('generator','PHP Simple XML'); //add generator node
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 } 
 */
+
+
+
 $sql = 'BEGIN noticias_orden(); END;';
 
 
@@ -67,6 +70,9 @@ $sql = 'BEGIN noticias_orden(); END;';
 print "$datos\n";
     
 var_dump($datos);
+
+
+
 /*
 
 if($results){ //we have records 
