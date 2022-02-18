@@ -58,9 +58,12 @@ body {
   font-size: 1.1rem;
   font-weight: bold;
 }
-.site-nav  :hover{
+.site-nav ul li:hover{
 	background: #ffd901;
-	color: #000000;
+}
+
+.site-nav ul li:hover > a {
+  color: #000;
 }
 .account-actions {
   display: flex;

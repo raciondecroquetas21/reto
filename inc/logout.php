@@ -8,5 +8,5 @@
    unset($_SESSION["password"]);
 
    echo 'You have cleaned session';
-   header('Refresh: 0; URL = index.php');
+   header('Refresh: 0; URL = ../index.php');
 ?>

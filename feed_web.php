@@ -29,7 +29,7 @@ $feed  = "http://www.youtube.com/feeds/videos.xml?channel_id=UCz_te5YcVVLaH0znru
 //Load feed xml file
 $xml = simplexml_load_file($feed);
 //display 6 feed entries, use more or less as desired
-for($i = 0; $i < 6; $i++) {
+for($i = 0; $i < 4; $i++) {
    //define our feed nodes
    $published = $xml->entry[$i]->published;
    //optional, shorten the date
