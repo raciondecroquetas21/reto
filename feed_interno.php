@@ -100,7 +100,7 @@ if (!$conn->query("DROP TABLE IF EXISTS test") || !$conn->query("BEGIN noticias_
 }
 
 if (!$conn->query("DROP PROCEDURE IF EXISTS p") ||
-    !$conn->query("BEGIN noticias_orden(); END;)) {
+    !$conn->query("BEGIN noticias_orden(); END;")) {
     echo "Falló la creación del procedimiento almacenado: (" . $conn->errno . ") " . $conn->error;
 }
 
