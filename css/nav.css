@@ -1,57 +1,79 @@
-nav{
-    display: flex;
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+body {
+  font-family: "Roboto", sans-serif;
 }
-.dropdownmenu ul, .dropdownmenu li {
-	margin: 0;
-	padding: 0;
+
+.site-header {
+  display: flex;
+  align-items: center;
+  background: #0d1313;
+  color: white;
 }
-.dropdownmenu ul {
-	/*background: gray;*/
-	list-style: none;
-	width: 100%;
+@media (max-width: 600px) {
+  .site-header {
+    flex-wrap: wrap;
+  }
+  .site-header .site-nav {
+    background: #222;
+    order: 2;
+    flex-basis: 100%;
+  }
+  .site-header .site-nav a {
+    font-size: 1rem;
+  }
+  .site-header .account-actions {
+    margin-left: auto;
+  }
 }
-.dropdownmenu li {
-	float: left;
-	position: relative;
-	width:auto;
+
+.logo_header {
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  width: 150px;
 }
-.dropdownmenu a {
-	background: #080808;
-	color: #FFFFFF;
-	display: block;
-	font: bold 12px/20px sans-serif;
-	padding: 10px 25px;
-	text-align: center;
-	text-decoration: none;
-	-webkit-transition: all .25s ease;
-	-moz-transition: all .25s ease;
-	-ms-transition: all .25s ease;
-	-o-transition: all .25s ease;
-	transition: all .25s ease;
+
+.site-nav {
+  text-align: center;
+  flex: 1;
 }
-.dropdownmenu li:hover a {
-	background: #000000;
+.site-nav > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
 }
-#submenu {
-	left: 0;
-	opacity: 0;
-	position: absolute;
-	top: 35px;
-	visibility: hidden;
-	z-index: 1;
+.site-nav .active a {
+  background: #ffd901;
+  color: #e9dd9c;
 }
-li:hover ul#submenu {
-	opacity: 1;
-	top: 40px;	/* adjust this as per top nav padding top & bottom comes */
-	visibility: visible;
+.site-nav a {
+  color: #e2e6e7;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 20px;
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
-#submenu li {
-	float: none;
-	width: 100%;
+
+.account-actions {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
 }
-#submenu a:hover {
-	background: #aa0521;
+
+.account-dropdown {
+  margin-right: 10px;
 }
-#submenu a {
-	background-color:#000000;
+.account-dropdown > ul {
+  display: none;
+}
+
+.sign-out-link {
+  color: #e2e6e7;
+  text-transform: uppercase;
+  font-size: 0.8rem;
 }
