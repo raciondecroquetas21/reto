@@ -13,7 +13,8 @@ body {
 h4 {
     font-size: 19px;}
  small {
-     font-size: 10px}
+     font-size: 10px;
+    color: #fff;}
  a {
      color:#ffd901}
 
@@ -27,6 +28,7 @@ flex-flow: row wrap;
   }  
 
 .video{
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-self: flex-end;
