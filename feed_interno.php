@@ -1,6 +1,6 @@
 <?php 
    
-   include_once 'inc/db.php';
+   /* include_once 'inc/db.php';
 
     $sql = 'BEGIN noticias_orden(); END;';
     
@@ -86,5 +86,29 @@ if($results){ //we have records
 	}
 }
 
-echo $rss->asXML(); //output XML 
+echo $rss->asXML(); //output XML */
 ?> 
+
+<?php
+
+// Store procedure call without params
+
+include_once 'inc/db.php';
+
+oci_parse ($conn, "CALL noticias_orden") OR DIE (mysqli_error($conn));
+
+       if ($result = oci_execute($conn)) {
+
+              while ($row = oci_fetch_assoc($result)) {
+
+                     // i.e.: DBTableFieldName="userID"
+                     echo "row = ".$row["DBTableFieldName"]."<br />";
+                     ....
+
+              }
+              oci_free_statement($result);
+       }
+       else
+       echo "<p>No se encontraron personas</p>";
+
+?>
