@@ -2,11 +2,11 @@
    
    include_once 'inc/db.php';
 
-    /* $sql = 'BEGIN noticias_orden(); END;';
+   /* $sql = 'BEGIN noticias_orden(); END;';
     
     $stmt = oci_parse($conn,$sql);
     
-    oci_execute($stmt); 
+    oci_execute($stmt); */
 
 
 
@@ -40,15 +40,13 @@ $generator = $rss->addChild('generator','PHP Simple XML'); //add generator node
 //connect to MySQL - mysqli(HOST, USERNAME, PASSWORD, DATABASE);
 //$mysqli = new mysqli($mysql_host, $mysql_username, $mysql_password, $mysql_database);
 
-
-  include_once 'inc/db.php';
-
+/*
 
 //Output any connection error
  if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
-} 
-*/
+} */
+
 $sql = 'BEGIN noticias_orden(); END;';
 
 
@@ -67,7 +65,7 @@ $sql = 'BEGIN noticias_orden(); END;';
     
 var_dump($datos);
 
-/*if($results){ //we have records 
+if($results){ //we have records 
 	while($row = $results->oci_parse($conn,$sql)
     
      ) //loop through each row
@@ -86,5 +84,5 @@ var_dump($datos);
 	}
 }
 
-echo $rss->asXML(); //output XML */
+echo $rss->asXML(); //output XML 
 ?> 
