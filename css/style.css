@@ -4,6 +4,7 @@ body {
 	background-color: #222222;
     background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #0f0f0f 10px ), repeating-linear-gradient( #c4c3bf55, #181818 );   
 	 color: rgb(15, 15, 15);
+	 height: 100%;
 }
 @keyframes spinner {
 	0% {
@@ -118,8 +119,7 @@ body {
 	margin-bottom: 20px;
 	border-radius: 15px;
 }
-.logo:hover {
-}
+
 .login button .spinner {
 	display: block;
 	width: 40px;
