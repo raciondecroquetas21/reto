@@ -45,7 +45,7 @@ $generator = $rss->addChild('generator','PHP Simple XML'); //add generator node
 
 
 //Output any connection error
-/* if ($mysqli->connect_error) {
+ if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 } 
 $sql = 'BEGIN noticias_orden(); END;';
