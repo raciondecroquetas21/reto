@@ -1,12 +1,12 @@
 <?php 
    
-   /* include_once 'inc/db.php';
+   include_once 'inc/db.php';
 
-    $sql = 'BEGIN noticias_orden(); END;';
+   /* $sql = 'BEGIN noticias_orden(); END;';
     
     $stmt = oci_parse($conn,$sql);
     
-    oci_execute($stmt); 
+    oci_execute($stmt); */
 
 
 
@@ -40,14 +40,12 @@ $generator = $rss->addChild('generator','PHP Simple XML'); //add generator node
 //connect to MySQL - mysqli(HOST, USERNAME, PASSWORD, DATABASE);
 //$mysqli = new mysqli($mysql_host, $mysql_username, $mysql_password, $mysql_database);
 
-
-  include_once 'inc/db.php';
-
+/*
 
 //Output any connection error
  if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
-} 
+} */
 
 $sql = 'BEGIN noticias_orden(); END;';
 
@@ -86,29 +84,5 @@ if($results){ //we have records
 	}
 }
 
-echo $rss->asXML(); //output XML */
+echo $rss->asXML(); //output XML 
 ?> 
-
-<?php
-
-  // Store procedure call without params
-
-  include_once 'inc/db.php';
-
-  $stmt=oci_parse ($conn, "CALL noticias_orden");
-
-       if ($result = oci_execute($stmt)) {
-
-              while ($row = oci_fetch_assoc($result)) {
-
-                     // i.e.: DBTableFieldName="userID"
-                     echo "row = ".$row["DBTableFieldName"]."<br />";
-                     ....
-
-              }
-              oci_free_statement($result);
-       }
-       else
-       echo "<p>No se encontraron personas</p>";
-
-?>
