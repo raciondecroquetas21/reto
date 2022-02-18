@@ -1,18 +1,18 @@
 <?php 
    
-   /* include_once 'inc/db.php';
+    include_once 'inc/db.php';
 
     $sql = 'BEGIN noticias_orden(); END;';
     
     $stmt = oci_parse($conn,$sql);
     
-    oci_execute($stmt); */
+    oci_execute($stmt); 
 
 
 
 // aqui empieza lo bueno lo anterior son las ref
 
-   /* header('Content-Type: text/xml; charset=utf-8', true); //set document header content type to be XML
+    header('Content-Type: text/xml; charset=utf-8', true); //set document header content type to be XML
 
 $rss = new SimpleXMLElement('<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"></rss>');
 $rss->addAttribute('version', '2.0');
@@ -47,7 +47,7 @@ $generator = $rss->addChild('generator','PHP Simple XML'); //add generator node
 //Output any connection error
 /* if ($mysqli->connect_error) {
     die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
-} */
+} 
 $sql = 'BEGIN noticias_orden(); END;';
 
 
@@ -65,7 +65,7 @@ $sql = 'BEGIN noticias_orden(); END;';
     
 var_dump($datos);
 
-/*
+
 
 if($results){ //we have records 
 	while($row = $results->oci_parse($conn,$sql)
@@ -86,5 +86,5 @@ if($results){ //we have records
 	}
 }
 
-echo $rss->asXML(); //output XML */
+echo $rss->asXML(); //output XML 
 ?>
